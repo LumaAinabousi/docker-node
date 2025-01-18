@@ -1,0 +1,23 @@
+list images: docker images
+list containers: docker ps
+in docker registries you find images, Docker Hub: one of the biggest registries for imgs
+docker pull imageName:imageTag
+docker logs "contId" 
+docker run -d contName:vers
+docker stop contID
+
+-t is used to tag your img: -t tagname
+------
+to actually access the container: open port 80(3306/etc..) on the container -> bind it to the host : -p "port:port"
+------
+sudo docker exec -it contName bash -> enter the terminal of the container
+mysql -u root -p
+----------------------------------------
+Install: 
+
+sudo apt-get update
+sudo apt-get install docker.io -y
+sudo systemctl start docker
+
+sudo docker build -t username/dh-repo:name-of-image .
+sudo docker push username/dh-repo:name-of-image
